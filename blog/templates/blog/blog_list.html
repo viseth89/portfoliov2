@@ -16,8 +16,10 @@
       </div>
       <div class="card-footer text-center text-muted">
             <div class="card-footer text-center text-muted">
+                    {% if user.is_authenticated %}
                     <a href="{% url 'blog_edit' blog.pk %}">Edit</a> |
                     <a href="{% url 'blog_delete' blog.pk %}">Delete</a> |
+                    {% endif %}
                     <a href="{% url 'blog_detail' blog.pk %}">Read More</a>
                   </div>
       </div>
