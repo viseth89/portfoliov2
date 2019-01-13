@@ -13,7 +13,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-      <a class="navbar-brand" href="{% url 'home' %}">Newspaper</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Viseth</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse"
       data-target="#navbarCollapse" aria-controls="navbarCollapse"
       aria-expanded="false" aria-label="Toggle navigation">
@@ -21,6 +21,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         {% if user.is_authenticated %}
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="{% url 'blog_new' %}">+ New</a></li>
+          </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link dropdown-toggle" href="#" id="userMenu"
